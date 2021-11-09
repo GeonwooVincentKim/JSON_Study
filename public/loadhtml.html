@@ -23,6 +23,10 @@
             
             if(xhr.status === 200){
                 console.log(xhr.responseText);
+            
+                document.getElementById("content").innerHTML = xhr.responseText;
+            } else {
+                console.log(`[${xhr.status}] : ${xhr.statusText}`);
             }
         }
     </script>
