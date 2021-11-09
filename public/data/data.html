@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         class CustomLocalTours extends HTMLElement {
@@ -13,7 +15,7 @@
                 this.render();
             }
 
-            render(){
+            render() {
                 let h2 = document.createElement("h2");
                 h2.innerHTML = this.getAttribute("h2")
                 this.appendChild(h2);
@@ -26,8 +28,8 @@
                 button.innerHTML = this.getAttribute("button-text");
                 this.appendChild(button);
             }
-            
-            static get observerdAttributes(){
+
+            static get observerdAttributes() {
                 return ["class", "h2-innerHTML", "details", "button"]
             }
         }
@@ -38,10 +40,14 @@
     <div id="tours">
         <h1>Guided Tours</h1>
         <ul>
-            <local-tours class="usa-tour" h2="New York, USA" span-text="$1,899 for 7 nights" button-text="Book Now"></local-tours>
-            <local-tours class="usa-tour" h2="Paris, France" span-text="$2,299 for 7 nights" button-text="Book Now"></local-tours>
-            <local-tours class="usa-tour" h2="Tokyo, Japan" span-text="$3,799 for 7 nights" button-text="Book Now"></local-tours>
+            <local-tours class="usa-tour" h2="New York, USA" span-text="$1,899 for 7 nights" button-text="Book Now">
+            </local-tours>
+            <local-tours class="usa-tour" h2="Paris, France" span-text="$2,299 for 7 nights" button-text="Book Now">
+            </local-tours>
+            <local-tours class="usa-tour" h2="Tokyo, Japan" span-text="$3,799 for 7 nights" button-text="Book Now">
+            </local-tours>
         </ul>
-      </div>
+    </div>
 </body>
-</html> 
+
+</html>
