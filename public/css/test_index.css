@@ -2,26 +2,11 @@ html {
     margin: 0;
     box-sizing: border-box;
 }
-/* :host {
-    color: red;
-} */
-
 #tours ul {
     padding: 0;
     overflow: hidden;
 }
-
-/* #tour-child {
-    list-style: none;
-    float: left;
-    width: 22.75%;
-    height: 150px;
-    background: rgba(37, 43, 48, 0.8);
-    padding: 0.5em;
-    position: relative;
-} */
-
-#tours #tour-child {
+#tours li {
     list-style: none;
     float: left;
     width: 22.75%;
@@ -30,24 +15,14 @@ html {
     padding: 0.5em;
     position: relative;
 }
-
-#tours > ul > #tour-child {
+#tours > ul > li + li {
     margin-left: 3%;
 }
 
-#tours > ul > #tour-child h2 {
-    color: #000;
-}
-
-/* #tours > ul > li + li {
-    margin-left: 3%;
-} */
-
-/* h2 {
+h3 {
     color: white;
-} */
-
-#span {
+}
+.details {
     display: block;
     line-height: 1.5em;
     background: #82add8;
@@ -58,7 +33,7 @@ html {
     padding: 3px 0;
     text-align: center;
 }
-button {
+.book {
     display: block;
     background: #4cb64f;
     border: 1px solid #081f09;
