@@ -6,7 +6,7 @@ html {
     padding: 0;
     overflow: hidden;
 }
-#tours li {
+#tours .test_index {
     list-style: none;
     float: left;
     width: 22.75%;
@@ -15,7 +15,7 @@ html {
     padding: 0.5em;
     position: relative;
 }
-#tours > ul > li + li {
+#tours > ul > .test_index + .test_index {
     margin-left: 3%;
 }
 

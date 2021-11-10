@@ -49,9 +49,9 @@ template.innerHTML = `
         font-size: 1.2em;
       }
     </style>
-    <h2></h2>
-    <span class="details"></span>
-    <button class="book"></button>
+        <h2></h2>
+        <span class="details"></span>
+        <button class="book"></button>
 `
 
 class TestIndex extends HTMLElement {
@@ -69,6 +69,7 @@ class TestIndex extends HTMLElement {
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         
+        // this.shadowRoot.querySelector("li").innerHTML = this.getAttribute("list");
         this.shadowRoot.querySelector("h2").innerText = this.getAttribute("city");
         this.shadowRoot.querySelector("span").innerText = this.getAttribute("detailPrice");
         this.shadowRoot.querySelector("button").innerText = this.getAttribute("isBook");
