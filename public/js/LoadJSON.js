@@ -24,6 +24,8 @@ class LoadJSON extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         
         getFile.shadowRoot.querySelector("p").innerText = this.document.getElementById("content").innerHTML;
+        responseObject = JSON.parse(getFile.shadowRoot.querySelector("p").innerText);
+        console.log(responseObject);
         // this.shadowRoot.querySelector("p").innerText = this.getAttribute("xhr-status");
     }
 }
