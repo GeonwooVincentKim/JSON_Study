@@ -2,11 +2,16 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
+:host {
+  color: red;
+}
+
 #tours ul {
   padding: 0;
   overflow: hidden;
 }
-#tours li {
+
+#tour-child {
   list-style: none;
   float: left;
   width: 22.75%;
@@ -15,9 +20,25 @@ html {
   padding: 0.5em;
   position: relative;
 }
-#tours > ul > li + li {
+
+
+/* #tours local-tours {
+  --list-style: none;
+  --float: left;
+  --width: 22.75%;
+  --height: 150px;
+  --background: rgba(37, 43, 48, 0.8);
+  --padding: 0.5em;
+  --position: relative;
+} */
+
+#tours > ul > #tour-child + #tour-child {
   margin-left: 3%;
 }
+/* 
+#tours > ul > li + li {
+  margin-left: 3%;
+} */
 h2 {
   color: white;
 }
