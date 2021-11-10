@@ -10,11 +10,19 @@ xhr.onreadystatechange = function () {
         return;
     if (xhr.status === 200) {
         console.log(xhr.responseText);
-        // xhr.responseText;
+        xhr.responseText;
 
-        document.getElementById("content").innerHTML = xhr.responseText;
+        // this.attachShadow({mode: "open"});
+        // this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        // document.getElementById("content").innerHTML = xhr.responseText;
+        // this.shadowRoot.querySelector("p").innerHTML = this.getAttribute("content");
 
         // Deserializing (String -> Object)
         responseObject = JSON.parse(xhr.responseText);
+
+        return xhr.responseText;
     }
 }
+
+// module.exports = {xhr};
