@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://poiemaweb.com/assets/css/ajax.css">
+
     <!-- <link rel="stylesheet" href="./css/loadhtml.css"> -->
     <!-- <link rel="stylesheet" href="https://poiemaweb.com/assets/css/ajax.css"> -->
 </head>
@@ -13,16 +15,16 @@
 
 
 <body>
-    <div id="contents"></div>
-
+    <div id="content"></div>
+<!-- 
     <template id="local-tours">
         <link rel="stylesheet" href="./css/testload.css">
-    </template>
+    </template> -->
 
     <script>
-        let template = document.getElementById('local-tours');
-        let templateContent = template.content;
-        document.body.appendChild(templateContent);
+        //let template = document.getElementById('local-tours');
+        //let templateContent = template.content;
+        //document.body.appendChild(templateContent);
         
 
         /*var template = document.querySelector("#local-tours");
@@ -51,7 +53,7 @@
                 console.log(xhr.responseText);
             
                 // document.getElementById("local-tours").innerHTML = xhr.responseText;
-                document.getElementById("contents").innerHTML = xhr.responseText;
+                document.getElementById("content").innerHTML = xhr.responseText;
             } else {
                 console.log(`[${xhr.status}] : ${xhr.statusText}`);
             }
