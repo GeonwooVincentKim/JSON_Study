@@ -1,150 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
 </head>
-
-<!-- <template id="test-local-css"> -->
-    <!-- <link href="https://poiemaweb.com/assets/css/ajax.css"> -->
-    <!-- <link rel="stylesheet" href="../css/testload.css"> -->
-    <!-- <h2></h2>
-    <span></span> -->
-<!-- </template> -->
 
 <body>
     <div id="tours">
-        <h1>Guided Tours</h1>
+        <h1>Gddd</h1>
         <ul>
-            <!-- <local-tours id="tour-child" class="usa-tour" h2="New York, USA" span="$1,899 for 7 nights "
-                button-text="Book Now">
-            </local-tours>
-            <local-tours id="tour-child" class="fra-tour" h2="Paris, France" span="$2,299 for 7 nights "
-                button-text="Book Now">
-            </local-tours>
-            <local-tours id="tour-child" class="jpn-tour" h2="Tokyo, Japan" span="$3,799 for 7 nights "
-                button-text="Book Now">
-            </local-tours> -->
-            <li class="usa tour">
-                <h2>New York, USA</h2>
-                <span class="details">$1,899 for 7 nights</span>
-                <button class="book">Book Now</button>
-              </li>
-              <li class="europe tour">
-                <h2>Paris, France</h2>
-                <span class="details">$2,299 for 7 nights</span>
-                <button class="book">Book Now</button>
-              </li>
-              <li class="asia tour">
-                <h2>Tokyo, Japan</h2>
-                <span class="details">$3,799 for 7 nights</span>
-                <button class="book">Book Now</button>
-              </li>
+            <li><test-index city="New York, USA" detailPrice="$1,899 for 7 nights" isBook="Book Now"></test-index></li>
+            <li><test-index city="Paris, France" detailPrice="$2,299 for 7 nights" isBook="Book Now"></test-index></li>
+            <li><test-index city="Tokyo, Japan" detailPrice="$3,799 for 7 nights" isBook="Book Now"></test-index></li>
         </ul>
     </div>
 
-    
-
-    <!-- <script>
-        const template = document.createElement('template');
-        template.innerTHML =
-        `
-            <li id="tour-child">
-                <h2>${this}</h2>
-                <span class="details">${this}</span>
-                <button class="book">${this}</button>
-            </li> 
-        `
-    /*<template id="data-template">
-            
-        </template>
-*/
-        class CustomLocalTours extends HTMLElement {
-            /*constructor(){
-                super();
-                let getTemplate = document.getElementById("test-local-css")
-                let templateContent = getTemplate.content;
-                document.body.appendChild(templateContent);
-
-                //let h2 = document.createElement("h2");
-                //h2.innerHTML = `${this.getAttribute("h2")}`
-
-                //let getH2Template = h2.content;
-                // document.body.appendChild(getH2Template);
-
-                const shadowRoot = this.attachShadow({mode: 'open'})
-                    .appendChild(templateContent.cloneNode(true));
-            }*/
-
-            connectedCallback() {
-                this.render();
-            }
-
-            render() {
-                // document.createElement("template")
-                // var clone = document.importNote(getTemplate, true);
-                let getTemplate = document.getElementById("test-local-css")
-                let templateContent = getTemplate.content;
-                document.body.appendChild(templateContent);
-
-                const shadowRoot = this.attachShadow({mode: 'open'})
-                    .appendChild(templateContent.cloneNode(true));
-
-                let h2 = document.createElement("h2");
-                // h2.innerHTML = this.getAttribute("h2")
-                h2.innerHTML = `${this.getAttribute("h2")}`
-                // document.body.appendChild(getH2Template);
-                
-                h2.style = "color: white;"
-                // document.getElementsByTagName("h2").appendChild(h2)
-                this.appendChild(h2);
-
-                // const shadowRoot = this.attachShadow({mode: 'open'})
-                //    .appendChild(getH2Template.cloneNode(true));
-
-                let span = document.createElement("span");
-                span.innerHTML = `${this.getAttribute("span")}`;
-                /*span.style = `display: block;
-                    line-height: 1.5em;
-                    background: #82add8;
-                    border: 1px solid #191d20;
-                    font-weight: bold;
-                    left: 0.5em;
-                    right: 0.5em;
-                    padding: 3px 0;
-                    text-align: center;
-                `*/
-                this.appendChild(span);
-
-                let button = document.createElement("button");
-                button.innerHTML = this.getAttribute("button-text");
-                button.style = `display: block;
-                    background: #4cb64f;
-                    border: 1px solid #081f09;
-                    cursor: pointer;
-                    width: 100%;
-                    margin-top: 0.4em;
-                    margin-bottom: 0.4em;
-                    padding: 5px 24px 3px 24px;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 1.2em;
-                `
-                this.appendChild(button);
-            }
-
-            static get observerdAttributes() {
-                return ["class", "h2-innerHTML", "details", "button"]
-            }
-        }
-
-        customElements.define("local-tours", CustomLocalTours)
-    </script> -->
+    <script src="../js/test_index.js"></script>
 </body>
-
 </html>
