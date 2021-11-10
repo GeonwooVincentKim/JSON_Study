@@ -7,39 +7,15 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://poiemaweb.com/assets/css/ajax.css">
-
-    <!-- <link rel="stylesheet" href="./css/loadhtml.css"> -->
-    <!-- <link rel="stylesheet" href="https://poiemaweb.com/assets/css/ajax.css"> -->
+    <script src="./js/test_index.js"></script>
 </head>
 
 
 
 <body>
     <div id="content"></div>
-<!-- 
-    <template id="local-tours">
-        <link rel="stylesheet" href="./css/testload.css">
-    </template> -->
 
     <script>
-        //let template = document.getElementById('local-tours');
-        //let templateContent = template.content;
-        //document.body.appendChild(templateContent);
-        
-
-        /*var template = document.querySelector("#local-tours");
-        var clone = document.importNode(template, true);
-        document.getElementById("tours").appendChild(clone.context);
-        */
-        /*template.innerTHML = 
-        `
-        <style>
-            @import "./css/loadhtml.css"
-        </style>
-        `*/
-
-        // @import "https://poiemaweb.com/assets/css/ajax.csss";
-
         const xhr = new XMLHttpRequest();
         console.log(xhr);
 
@@ -51,8 +27,6 @@
             
             if(xhr.status === 200){
                 console.log(xhr.responseText);
-            
-                // document.getElementById("local-tours").innerHTML = xhr.responseText;
                 document.getElementById("content").innerHTML = xhr.responseText;
             } else {
                 console.log(`[${xhr.status}] : ${xhr.statusText}`);
